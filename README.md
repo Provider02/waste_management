@@ -40,15 +40,6 @@ Kód obsiahnutý v tomto repozitári bol použitý a je vhodný na použitie pro
      | data_processing_eda_moratuwa.ipynb
      | data_processing_eda_austin.ipynb
      | data_processing_eda_ballarat.ipynb
-     
-     └─── predictions/
-       | prediction_sarima.ipynb
-       | prediction_xgboost.ipynb
-       | prediction_lstm.ipynb
-       | prediction_rf.ipynb
-       | prediction_prophet.ipynb
-     └─── comparison/
-       | results_comparison.ipynb
   
    └─── 02_processed_data/
      | boralasgamuwa_processed.csv
@@ -95,7 +86,7 @@ Kód obsiahnutý v tomto repozitári bol použitý a je vhodný na použitie pro
  
    Notebooky je potrebné spúšťať v nasledujúcom poradí:
    
-   **Krok 1 — Predspracovanie dát a EDA** (priečinok `data_processing_eda/`)
+   **Krok 1 — Predspracovanie dát a EDA** (priečinok `01_data_processing_eda/`)
    
    Spustite postupne notebooky pre každý dataset. Tieto notebooky vykonajú:
    * Načítanie a agregáciu surových dát na denné hodnoty
@@ -108,11 +99,11 @@ Kód obsiahnutý v tomto repozitári bol použitý a je vhodný na použitie pro
    * Korelačnú analýzu a autokorelačnú analýzu (ACF/PACF)
    * Export spracovaného datasetu do priečinka `02_processed_data/`
  
-   **Krok 2 — Predikcie** (priečinok `experiments/`)
+   **Krok 2 — Predikcie** (priečinok `04_experiments/`)
    
    Po úspešnom spracovaní všetkých datasetov spustite predikčné notebooky. Každý notebook natrénuje príslušný model na všetkých šiestich datasetoch a uloží výsledky do priečinka `05_prediction_results/`. Notebooky je možné spúšťať v ľubovoľnom poradí.
  
-   **Krok 3 — Porovnanie výsledkov** (priečinok `experiments/`)
+   **Krok 3 — Porovnanie výsledkov** (priečinok `04_experiments/`)
    
    Po dokončení všetkých predikčných notebookov spustite `results_comparison.ipynb`, ktorý načíta výsledky všetkých modelov a vytvorí porovnávacie tabuľky a vizualizácie.
 
