@@ -1,0 +1,7 @@
+dataset,model,mae,rmse,mape,test_days
+Boralesgamuwa UC (Sri Lanka),Prophet,7.55,9.67,44.17,90
+Dehiwala MC (Sri Lanka),Prophet,34.69,43.01,52.67,90
+Homagama PS (Sri Lanka),Prophet,11.89,15.84,36.25,90
+Moratuwa MC (Sri Lanka),Prophet,24.57,29.4,34.69,90
+Austin TX (USA),Prophet,202.96,372.13,43.84,90
+Ballarat (Australia),Prophet,16.99,23.26,76.13,90

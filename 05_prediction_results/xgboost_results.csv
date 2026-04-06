@@ -1,0 +1,7 @@
+dataset,model,mae,rmse,mape,test_days
+Boralesgamuwa UC (Sri Lanka),XGBoost,5.9,8.14,39.23,90
+Dehiwala MC (Sri Lanka),XGBoost,23.57,33.58,40.41,90
+Homagama PS (Sri Lanka),XGBoost,11.04,13.56,37.21,90
+Moratuwa MC (Sri Lanka),XGBoost,20.06,25.63,31.78,90
+Austin TX (USA),XGBoost,138.22,304.51,38.91,90
+Ballarat (Australia),XGBoost,10.56,16.86,25.06,90

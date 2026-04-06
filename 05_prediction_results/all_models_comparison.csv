@@ -1,0 +1,31 @@
+dataset,model,mae,rmse,mape,test_days,aic,epochs_trained,lookback
+Boralesgamuwa UC (Sri Lanka),SARIMA,7.27,9.2,45.11,90,16185.68,,
+Dehiwala MC (Sri Lanka),SARIMA,40.75,46.88,55.17,90,20371.0,,
+Homagama PS (Sri Lanka),SARIMA,11.16,14.93,36.65,90,15592.34,,
+Moratuwa MC (Sri Lanka),SARIMA,19.39,25.26,33.65,90,10779.96,,
+Austin TX (USA),SARIMA,638.5,808.34,1419.98,90,82898.32,,
+Ballarat (Australia),SARIMA,24.91,33.2,130.72,90,27732.93,,
+Boralesgamuwa UC (Sri Lanka),XGBoost,5.9,8.14,39.23,90,,,
+Dehiwala MC (Sri Lanka),XGBoost,23.57,33.58,40.41,90,,,
+Homagama PS (Sri Lanka),XGBoost,11.04,13.56,37.21,90,,,
+Moratuwa MC (Sri Lanka),XGBoost,20.06,25.63,31.78,90,,,
+Austin TX (USA),XGBoost,138.22,304.51,38.91,90,,,
+Ballarat (Australia),XGBoost,10.56,16.86,25.06,90,,,
+Boralesgamuwa UC (Sri Lanka),LSTM,7.89,9.75,45.35,90,,11.0,30.0
+Dehiwala MC (Sri Lanka),LSTM,41.73,47.43,55.66,90,,6.0,30.0
+Homagama PS (Sri Lanka),LSTM,12.32,16.55,35.66,90,,9.0,30.0
+Moratuwa MC (Sri Lanka),LSTM,20.17,25.84,33.96,90,,6.0,30.0
+Austin TX (USA),LSTM,320.94,496.19,360.52,90,,40.0,30.0
+Ballarat (Australia),LSTM,27.49,33.33,116.54,90,,24.0,30.0
+Boralesgamuwa UC (Sri Lanka),RF,6.01,8.33,41.23,90,,,
+Dehiwala MC (Sri Lanka),RF,23.5,34.46,39.05,90,,,
+Homagama PS (Sri Lanka),RF,10.75,13.6,36.46,90,,,
+Moratuwa MC (Sri Lanka),RF,19.69,25.72,31.61,90,,,
+Austin TX (USA),RF,155.64,343.9,35.07,90,,,
+Ballarat (Australia),RF,10.5,18.94,17.86,90,,,
+Boralesgamuwa UC (Sri Lanka),Prophet,7.55,9.67,44.17,90,,,
+Dehiwala MC (Sri Lanka),Prophet,34.69,43.01,52.67,90,,,
+Homagama PS (Sri Lanka),Prophet,11.89,15.84,36.25,90,,,
+Moratuwa MC (Sri Lanka),Prophet,24.57,29.4,34.69,90,,,
+Austin TX (USA),Prophet,202.96,372.13,43.84,90,,,
+Ballarat (Australia),Prophet,16.99,23.26,76.13,90,,,
