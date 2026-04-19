@@ -133,7 +133,7 @@ V rámci práce bolo implementovaných a porovnaných päť predikčných modelo
 | Model | Typ | Popis |
 |-------|-----|-------|
 | SARIMA | Štatistický baseline | Sezónny autoregresný model s parametrami (1,1,1)(1,1,1,7) |
-| Random Forest | Ensemble (bagging) | Ansámbel rozhodovacích stromov, 300 estimátorov |
+| Random Forest | Ensemble (bagging) | Súbor rozhodovacích stromov, 300 estimátorov |
 | XGBoost | Ensemble (boosting) | Gradient boosting s optimalizovanými hyperparametrami |
 | LSTM | Deep learning | Dvojvrstvová rekurentná neurónová sieť s lookback 30 dní |
 | Prophet | Špecializovaný | Model od Meta pre časové rady so sezónnosťou |
