@@ -92,8 +92,7 @@ Kód obsiahnutý v tomto repozitári bol použitý a je vhodný na použitie pro
    * Načítanie a agregáciu surových dát na denné hodnoty
    * Pridanie kalendárnych príznakov a sviatkov príslušnej krajiny
    * Stiahnutie a integráciu meteorologických dát prostredníctvom API Meteostat
-   * Detekciu a ošetrenie odľahlých hodnôt
-   * Imputáciu chýbajúcich hodnôt pomocou modelu XGBoost
+   * Analýzu chýbajúcich hodnôt cieľového atribútu
    * Konštrukciu príznakov (lag features, kĺzavé štatistiky, cyklické kódovanie)
    * Exploratívnu analýzu dát s vizualizáciami
    * Korelačnú analýzu a autokorelačnú analýzu (ACF/PACF)
@@ -115,15 +114,15 @@ Projekt využíva šesť datasetov denného množstva vyvezeného komunálneho o
 | Dataset | Región | Obdobie | Priem. množstvo |
 |---------|--------|---------|-----------------|
 | Boralesgamuwa UC | Srí Lanka | 2012–2018 | ~27 ton/deň |
-| Dehiwala MC | Srí Lanka | 2012–2018 | ~142 ton/deň |
-| Homagama PS | Srí Lanka | 2012–2018 | ~35 ton/deň |
-| Moratuwa MC | Srí Lanka | 2015–2018 | ~87 ton/deň |
-| Austin TX | USA | 2003–2021 | ~1407 ton/deň |
+| Dehiwala MC | Srí Lanka | 2012–2015 | ~142 ton/deň |
+| Homagama PS | Srí Lanka | 2012–2018 | ~33 ton/deň |
+| Moratuwa MC | Srí Lanka | 2015–2018 | ~76 ton/deň |
+| Austin TX | USA | 2003–2021 | ~1480 ton/deň |
 | Ballarat | Austrália | 2001–2014 | ~69 ton/deň |
  
 Štyri datasety zo Srí Lanky pochádzajú z repozitára [UCloudMl/solid-waste-prediction](https://github.com/UCloudMl/solid-waste-prediction). Datasety z Austinu a Ballaratu sú verejne dostupné open-source datasety, taktiež dostupné v spomenutom repozitári.
  
-Meteorologické dáta (priemerná denná teplota, zrážky, rýchlosť vetra) boli získané prostredníctvom API služby [Meteostat](https://meteostat.net/) pre geografickú polohu príslušnú každému datasetu.
+Meteorologické dáta (priemerná denná teplota, zrážky) boli získané prostredníctvom API služby [Meteostat](https://meteostat.net/) pre geografickú polohu príslušnú každému datasetu.
 
 
 ## Použité modely
@@ -134,7 +133,7 @@ V rámci práce bolo implementovaných a porovnaných päť predikčných modelo
 |-------|-----|-------|
 | SARIMA | Štatistický baseline | Sezónny autoregresný model s parametrami (1,1,1)(1,1,1,7) |
 | Random Forest | Ensemble (bagging) | Súbor rozhodovacích stromov, 300 estimátorov |
-| XGBoost | Ensemble (boosting) | Gradient boosting s optimalizovanými hyperparametrami |
+| XGBoost | Ensemble (boosting) | Gradient boosting ansámblový model |
 | LSTM | Deep learning | Dvojvrstvová rekurentná neurónová sieť s lookback 30 dní |
 | Prophet | Špecializovaný | Model od Meta pre časové rady so sezónnosťou |
  
@@ -144,8 +143,8 @@ V rámci práce bolo implementovaných a porovnaných päť predikčných modelo
 Oproti referenčnému projektu boli dáta obohatené o nasledujúce príznaky:
  
 * **Kalendárne:** rok, mesiac, deň v týždni, deň v roku, týždeň v roku
-* **Binárne:** víkend, sviatok, deň po víkende, deň po sviatku
-* **Meteorologické:** priemerná teplota, zrážky, rýchlosť vetra
+* **Binárne:** víkend, sviatok, deň po víkende, deň po sviatku, deň po chýabjúcom zázname
+* **Meteorologické:** priemerná teplota, zrážky
 * **Lag príznaky:** hodnoty z predchádzajúcich 1, 2, 3, 7, 14 a 30 dní
 * **Kĺzavé štatistiky:** 7-dňový a 30-dňový priemer a štandardná odchýlka
 * **Cyklické kódovanie:** sínus/kosínus transformácie mesiaca a dňa v týždni
@@ -156,11 +155,10 @@ Oproti referenčnému projektu boli dáta obohatené o nasledujúce príznaky:
 Oproti pôvodnému projektu [UCloudMl/solid-waste-prediction](https://github.com/UCloudMl/solid-waste-prediction) boli realizované nasledujúce rozšírenia:
  
 * Integrácia meteorologických dát prostredníctvom API Meteostat
-* Pridanie príznakov akumulácie odpadu (deň po víkende, deň po sviatku)
+* Iný prístup k chýabjúcim záznam, ktoré sú dopĺňané nulovou hodnotou len pri potvrdenom prípade kumulácie odpadu
+* Pridanie príznakov akumulácie odpadu (deň po víkende, deň po sviatku, deň po chýabjúcom zázname)
 * Korelačná analýza príznakov a autokorelačná analýza (ACF/PACF)
 * Kvartilová analýza vplyvu meteorologických podmienok na tvorbu odpadu
-* Optimalizácia použitých modelov
-* Optimalizácia hyperparametrov modelu XGBoost pomocou GridSearchCV
  
  
 ## Technológie
