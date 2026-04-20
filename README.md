@@ -47,17 +47,20 @@ Kód obsiahnutý v tomto repozitári bol použitý a je vhodný na použitie pro
      | ...
   
    └─── 03_visualizations/
-     └─── Boralasgamuwa/
-     └─── Dehiwala/
-     └─── ...
-     └─── SARIMA/
-     └─── XGBoost/
-     └─── LSTM/
-     └─── RF/
-     └─── Prophet/
-     └─── Comparison/
+     └─── EDA
+       └─── Boralasgamuwa/
+       └─── Dehiwala/
+       └─── ...
+     └─── Experiments
+       └─── SARIMA/
+       └─── XGBoost/
+       └─── LSTM/
+       └─── RF/
+       └─── Prophet/
+     └─── Results/
 
    └─── 04_experiments/
+     | prediction_baseline.ipynb
      | prediction_sarima.ipynb
      | prediction_xgboost.ipynb
      | prediction_lstm.ipynb
@@ -66,12 +69,15 @@ Kód obsiahnutý v tomto repozitári bol použitý a je vhodný na použitie pro
      | results_comparison.ipynb
   
    └─── 05_prediction_results/
+     | baseline_results.csv
      | sarima_results.csv
      | xgboost_results.csv
      | lstm_results.csv
      | rf_results.csv
      | prophet_results.csv
      | all_models_comparison.csv
+     | improvement_over_baseline.csv
+     | wilcoxon_sginificance.csv
    </pre>
  
 3. Nastavenie ciest
@@ -89,7 +95,7 @@ Kód obsiahnutý v tomto repozitári bol použitý a je vhodný na použitie pro
    **Krok 1 — Predspracovanie dát a EDA** (priečinok `01_data_processing_eda/`)
    
    Spustite postupne notebooky pre každý dataset. Tieto notebooky vykonajú:
-   * Načítanie a agregáciu surových dát na denné hodnoty
+   * Načítanie, filtráciu a agregáciu dát na denné hodnoty
    * Pridanie kalendárnych príznakov a sviatkov príslušnej krajiny
    * Stiahnutie a integráciu meteorologických dát prostredníctvom API Meteostat
    * Analýzu chýbajúcich hodnôt cieľového atribútu
@@ -131,7 +137,7 @@ V rámci práce bolo implementovaných a porovnaných päť predikčných modelo
  
 | Model | Typ | Popis |
 |-------|-----|-------|
-| SARIMA | Štatistický baseline | Sezónny autoregresný model s parametrami (1,1,1)(1,1,1,7) |
+| SARIMA | Štatistický baseline | Sezónny autoregresný model s parametrami (1,0,1)(1,1,1,7) |
 | Random Forest | Ensemble (bagging) | Súbor rozhodovacích stromov, 300 estimátorov |
 | XGBoost | Ensemble (boosting) | Gradient boosting ansámblový model |
 | LSTM | Deep learning | Dvojvrstvová rekurentná neurónová sieť s lookback 30 dní |
@@ -155,10 +161,12 @@ Oproti referenčnému projektu boli dáta obohatené o nasledujúce príznaky:
 Oproti pôvodnému projektu [UCloudMl/solid-waste-prediction](https://github.com/UCloudMl/solid-waste-prediction) boli realizované nasledujúce rozšírenia:
  
 * Integrácia meteorologických dát prostredníctvom API Meteostat
-* Iný prístup k chýabjúcim záznam, ktoré sú dopĺňané nulovou hodnotou len pri potvrdenom prípade kumulácie odpadu
+* Iný prístup k chýabjúcim záznamom, ktoré sú dopĺňané nulovou hodnotou len pri potvrdenom prípade kumulácie odpadu
 * Pridanie príznakov akumulácie odpadu (deň po víkende, deň po sviatku, deň po chýabjúcom zázname)
 * Korelačná analýza príznakov a autokorelačná analýza (ACF/PACF)
 * Kvartilová analýza vplyvu meteorologických podmienok na tvorbu odpadu
+* Testovanie predikcie modelov na viacerých rozdeleniach dát
+* Test štatistickej významnosti rozdielov medzi modelmi
  
  
 ## Technológie
