@@ -1,7 +1,7 @@
-dataset,model,mae,rmse,mape,test_days
-Boralesgamuwa UC (Sri Lanka),Prophet,7.55,9.67,44.17,90
-Dehiwala MC (Sri Lanka),Prophet,34.69,43.01,52.67,90
-Homagama PS (Sri Lanka),Prophet,11.89,15.84,36.25,90
-Moratuwa MC (Sri Lanka),Prophet,24.57,29.4,34.69,90
-Austin TX (USA),Prophet,202.96,372.13,43.84,90
-Ballarat (Australia),Prophet,16.99,23.26,76.13,90
+dataset,model,mae,rmse,smape,n_splits,split_days,split_details
+Boralesgamuwa UC (Sri Lanka),Prophet,6.78,8.9,26.7,3,90,"[{'mae': 8.109883705342469, 'rmse': np.float64(10.040249286859645), 'smape': np.float64(30.353106206565844)}, {'mae': 5.734988039988642, 'rmse': np.float64(8.015468073588018), 'smape': np.float64(24.243801249351726)}, {'mae': 6.488331789850942, 'rmse': np.float64(8.634838071153675), 'smape': np.float64(25.516025668268043)}]"
+Dehiwala MC (Sri Lanka),Prophet,30.32,40.61,23.86,3,90,"[{'mae': 26.971132172824667, 'rmse': np.float64(33.37454159719906), 'smape': np.float64(18.879217235670684)}, {'mae': 37.134368829647904, 'rmse': np.float64(50.046915587167405), 'smape': np.float64(31.89714190523334)}, {'mae': 26.867905212955026, 'rmse': np.float64(38.405470061149465), 'smape': np.float64(20.790751663072683)}]"
+Homagama PS (Sri Lanka),Prophet,10.85,14.16,32.37,3,90,"[{'mae': 12.549567540799075, 'rmse': np.float64(16.271027461739546), 'smape': np.float64(36.29914961671016)}, {'mae': 9.303100540082792, 'rmse': np.float64(11.906477021744134), 'smape': np.float64(30.221061359070422)}, {'mae': 10.703130434393872, 'rmse': np.float64(14.29281885774669), 'smape': np.float64(30.578978547352385)}]"
+Moratuwa MC (Sri Lanka),Prophet,17.83,23.75,26.07,3,90,"[{'mae': 15.24864459449391, 'rmse': np.float64(21.428047731363726), 'smape': np.float64(22.996186301285817)}, {'mae': 18.950473881098432, 'rmse': np.float64(23.881094326140452), 'smape': np.float64(26.547805248067917)}, {'mae': 19.291969107085873, 'rmse': np.float64(25.951297188951887), 'smape': np.float64(28.652442962903386)}]"
+Austin TX (USA),Prophet,158.95,239.21,51.66,3,90,"[{'mae': 158.91021831730387, 'rmse': np.float64(210.365605689131), 'smape': np.float64(51.652027679966885)}, {'mae': 111.50631775641916, 'rmse': np.float64(142.0060659664522), 'smape': np.float64(49.94012285392491)}, {'mae': 206.4332430123804, 'rmse': np.float64(365.2533438675381), 'smape': np.float64(53.38975665333502)}]"
+Ballarat (Australia),Prophet,8.73,12.21,65.12,3,90,"[{'mae': 7.851202727480839, 'rmse': np.float64(11.38262262351722), 'smape': np.float64(65.12799045816074)}, {'mae': 8.704894241671607, 'rmse': np.float64(11.80758700824326), 'smape': np.float64(65.74234928703126)}, {'mae': 9.628424216536258, 'rmse': np.float64(13.43062047646066), 'smape': np.float64(64.47858064109953)}]"

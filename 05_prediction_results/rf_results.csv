@@ -1,7 +1,7 @@
-dataset,model,mae,rmse,mape,test_days
-Boralesgamuwa UC (Sri Lanka),Random Forest,6.01,8.33,41.23,90
-Dehiwala MC (Sri Lanka),Random Forest,23.5,34.46,39.05,90
-Homagama PS (Sri Lanka),Random Forest,10.75,13.6,36.46,90
-Moratuwa MC (Sri Lanka),Random Forest,19.69,25.72,31.61,90
-Austin TX (USA),Random Forest,155.64,343.9,35.07,90
-Ballarat (Australia),Random Forest,10.5,18.94,17.86,90
+dataset,model,mae,rmse,smape,n_splits,split_days,split_details
+Boralesgamuwa UC (Sri Lanka),Random Forest,6.37,8.39,25.22,3,90,"[{'mae': 6.45408085239278, 'rmse': np.float64(8.092163071544274), 'smape': np.float64(25.622015526063503)}, {'mae': 6.349634163784385, 'rmse': np.float64(8.49022826787007), 'smape': np.float64(25.27831523733489)}, {'mae': 6.301127030219287, 'rmse': np.float64(8.60003713987496), 'smape': np.float64(24.75604632009091)}]"
+Dehiwala MC (Sri Lanka),Random Forest,28.32,38.99,22.29,3,90,"[{'mae': 19.137933672864115, 'rmse': np.float64(26.207908502418093), 'smape': np.float64(13.475881322476557)}, {'mae': 36.0767067359245, 'rmse': np.float64(47.949986778842884), 'smape': np.float64(28.588686545028395)}, {'mae': 29.75203162868718, 'rmse': np.float64(42.80901835411546), 'smape': np.float64(24.810674761054774)}]"
+Homagama PS (Sri Lanka),Random Forest,11.11,14.34,33.69,3,90,"[{'mae': 9.683599973720614, 'rmse': np.float64(12.251681801901544), 'smape': np.float64(32.0150242457551)}, {'mae': 12.189597005003067, 'rmse': np.float64(15.805020486082695), 'smape': np.float64(34.59627592004847)}, {'mae': 11.467270655848564, 'rmse': np.float64(14.957515884804385), 'smape': np.float64(34.4667107698683)}]"
+Moratuwa MC (Sri Lanka),Random Forest,16.97,22.51,24.88,3,90,"[{'mae': 13.36951148273321, 'rmse': np.float64(18.95761748852586), 'smape': np.float64(18.970574308769876)}, {'mae': 18.371278416028336, 'rmse': np.float64(23.50339241745025), 'smape': np.float64(26.95871496018772)}, {'mae': 19.178389844722666, 'rmse': np.float64(25.07753460886642), 'smape': np.float64(28.720449039622796)}]"
+Austin TX (USA),Random Forest,124.97,219.32,45.48,3,90,"[{'mae': 122.15631853888364, 'rmse': np.float64(177.72157447298957), 'smape': np.float64(50.13054274806754)}, {'mae': 76.30225629805241, 'rmse': np.float64(109.86905887358526), 'smape': np.float64(42.86393851767826)}, {'mae': 176.44672797150275, 'rmse': np.float64(370.3587442568198), 'smape': np.float64(43.45765013014382)}]"
+Ballarat (Australia),Random Forest,7.01,11.72,32.46,3,90,"[{'mae': 7.553004116402998, 'rmse': np.float64(14.467075995397273), 'smape': np.float64(26.34922851625689)}, {'mae': 6.16099473729002, 'rmse': np.float64(10.792578595340698), 'smape': np.float64(22.799841727041382)}, {'mae': 7.3075295714063255, 'rmse': np.float64(9.904504674449303), 'smape': np.float64(48.229855525743496)}]"

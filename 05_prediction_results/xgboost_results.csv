@@ -1,7 +1,7 @@
-dataset,model,mae,rmse,mape,test_days
-Boralesgamuwa UC (Sri Lanka),XGBoost,5.9,8.14,39.23,90
-Dehiwala MC (Sri Lanka),XGBoost,23.57,33.58,40.41,90
-Homagama PS (Sri Lanka),XGBoost,11.04,13.56,37.21,90
-Moratuwa MC (Sri Lanka),XGBoost,20.06,25.63,31.78,90
-Austin TX (USA),XGBoost,138.22,304.51,38.91,90
-Ballarat (Australia),XGBoost,10.56,16.86,25.06,90
+dataset,model,mae,rmse,smape,n_splits,split_days,split_details
+Boralesgamuwa UC (Sri Lanka),XGBoost,7.04,9.23,27.48,3,90,"[{'mae': 8.06927882724338, 'rmse': np.float64(10.189205575350716), 'smape': np.float64(29.895651059983603)}, {'mae': 6.134691601223416, 'rmse': np.float64(8.380908366007116), 'smape': np.float64(25.30488649049395)}, {'mae': 6.918096868303088, 'rmse': np.float64(9.108372374186125), 'smape': np.float64(27.246367671064846)}]"
+Dehiwala MC (Sri Lanka),XGBoost,30.0,40.49,23.67,3,90,"[{'mae': 26.711716057671442, 'rmse': np.float64(33.20504593910059), 'smape': np.float64(18.976979385126928)}, {'mae': 37.37216502549913, 'rmse': np.float64(53.52682372310616), 'smape': np.float64(31.205904256491753)}, {'mae': 25.911405754937064, 'rmse': np.float64(34.74181424873141), 'smape': np.float64(20.81568898997554)}]"
+Homagama PS (Sri Lanka),XGBoost,11.94,15.62,35.33,3,90,"[{'mae': 12.055674661424424, 'rmse': np.float64(15.776894127264613), 'smape': np.float64(35.03081769345168)}, {'mae': 11.119633356730144, 'rmse': np.float64(14.839994078960986), 'smape': np.float64(33.816614512218415)}, {'mae': 12.653805575052896, 'rmse': np.float64(16.24116643975684), 'smape': np.float64(37.14847546397404)}]"
+Moratuwa MC (Sri Lanka),XGBoost,18.74,24.16,27.61,3,90,"[{'mae': 17.786728230794274, 'rmse': np.float64(23.67548995252528), 'smape': np.float64(26.78545317411788)}, {'mae': 16.59039088439941, 'rmse': np.float64(21.535534350424637), 'smape': np.float64(23.738261384057274)}, {'mae': 21.856433442857533, 'rmse': np.float64(27.28008971757456), 'smape': np.float64(32.30078959475321)}]"
+Austin TX (USA),XGBoost,145.84,244.37,44.8,3,90,"[{'mae': 135.1696249564065, 'rmse': np.float64(201.10370306874825), 'smape': np.float64(50.39946613473331)}, {'mae': 88.7395763173845, 'rmse': np.float64(127.24185593244123), 'smape': np.float64(41.94081022828765)}, {'mae': 213.60513478288652, 'rmse': np.float64(404.7577268452715), 'smape': np.float64(42.0642000985039)}]"
+Ballarat (Australia),XGBoost,6.82,10.8,43.45,3,90,"[{'mae': 6.394601259973313, 'rmse': np.float64(9.58102257966569), 'smape': np.float64(38.99205684901484)}, {'mae': 6.466115400155387, 'rmse': np.float64(10.752641978613001), 'smape': np.float64(48.11615087222302)}, {'mae': 7.612578549865218, 'rmse': np.float64(12.06080039453218), 'smape': np.float64(43.23275922814743)}]"

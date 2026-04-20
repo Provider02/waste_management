@@ -1,7 +1,7 @@
-dataset,model,mae,rmse,mape,test_days,aic
-Boralesgamuwa UC (Sri Lanka),SARIMA,7.27,9.2,45.11,90,16185.68
-Dehiwala MC (Sri Lanka),SARIMA,40.75,46.88,55.17,90,20371.0
-Homagama PS (Sri Lanka),SARIMA,11.16,14.93,36.65,90,15592.34
-Moratuwa MC (Sri Lanka),SARIMA,19.39,25.26,33.65,90,10779.96
-Austin TX (USA),SARIMA,638.5,808.34,1419.98,90,82898.32
-Ballarat (Australia),SARIMA,24.91,33.2,130.72,90,27732.93
+dataset,model,mae,rmse,smape,n_splits,split_days,best_split_aic,split_details
+Boralesgamuwa UC (Sri Lanka),SARIMA,7.61,9.63,29.85,3,90,16531.52,"[{'mae': 9.140149199835882, 'rmse': np.float64(11.236159324604362), 'smape': np.float64(34.13071129185753)}, {'mae': 6.591089174625105, 'rmse': np.float64(8.566554263124491), 'smape': np.float64(27.696060521435385)}, {'mae': 7.0979647153483825, 'rmse': np.float64(9.073183511485345), 'smape': np.float64(27.721797117474573)}]"
+Dehiwala MC (Sri Lanka),SARIMA,36.21,46.33,28.27,3,90,10741.36,"[{'mae': 31.585112177092697, 'rmse': np.float64(39.198679661374065), 'smape': np.float64(22.06062049980952)}, {'mae': 37.22220444074362, 'rmse': np.float64(51.20607549524244), 'smape': np.float64(31.552269249619535)}, {'mae': 39.834553981720084, 'rmse': np.float64(48.574516565393495), 'smape': np.float64(31.21080420913598)}]"
+Homagama PS (Sri Lanka),SARIMA,10.96,14.35,32.71,3,90,15119.04,"[{'mae': 12.264959534041145, 'rmse': np.float64(16.08808706533523), 'smape': np.float64(35.64542999637991)}, {'mae': 9.526023961757678, 'rmse': np.float64(12.102337971055164), 'smape': np.float64(30.862125640447246)}, {'mae': 11.0829517477124, 'rmse': np.float64(14.872509088348098), 'smape': np.float64(31.629252338577786)}]"
+Moratuwa MC (Sri Lanka),SARIMA,17.06,22.68,25.21,3,90,10556.76,"[{'mae': 18.356428245582244, 'rmse': np.float64(24.96309260160501), 'smape': np.float64(26.88431747232726)}, {'mae': 15.921914727947417, 'rmse': np.float64(20.946829882070432), 'smape': np.float64(22.8072348796882)}, {'mae': 16.900952961536156, 'rmse': np.float64(22.120120715961548), 'smape': np.float64(25.93478567569062)}]"
+Austin TX (USA),SARIMA,176.31,294.46,43.66,3,90,77696.44,"[{'mae': 171.98697199154645, 'rmse': np.float64(238.06028252383678), 'smape': np.float64(39.37670719311455)}, {'mae': 127.2858216356627, 'rmse': np.float64(174.0363469435043), 'smape': np.float64(40.93604577398142)}, {'mae': 229.6561014402456, 'rmse': np.float64(471.2870895923283), 'smape': np.float64(50.680856701038635)}]"
+Ballarat (Australia),SARIMA,15.03,22.56,66.01,3,90,34883.34,"[{'mae': 11.862995469518303, 'rmse': np.float64(17.34033077481662), 'smape': np.float64(68.06331673424746)}, {'mae': 10.754599763167302, 'rmse': np.float64(22.04349394669087), 'smape': np.float64(70.45525051045266)}, {'mae': 22.46078260433656, 'rmse': np.float64(28.305273545553042), 'smape': np.float64(59.519859583843505)}]"
