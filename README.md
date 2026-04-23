@@ -116,15 +116,15 @@ Kód obsiahnutý v tomto repozitári bol použitý a je vhodný na použitie pro
    ## Použité dáta
  
 Projekt využíva šesť datasetov denného množstva vyvezeného komunálneho odpadu:
- 
-| Dataset | Región | Obdobie | Priem. množstvo |
-|---------|--------|---------|-----------------|
-| Boralesgamuwa UC | Srí Lanka | 2012–2018 | ~27 ton/deň |
-| Dehiwala MC | Srí Lanka | 2012–2015 | ~142 ton/deň |
-| Homagama PS | Srí Lanka | 2012–2018 | ~33 ton/deň |
-| Moratuwa MC | Srí Lanka | 2015–2018 | ~76 ton/deň |
-| Austin TX | USA | 2003–2021 | ~1480 ton/deň |
-| Ballarat | Austrália | 2001–2014 | ~69 ton/deň |
+
+| Dataset | Región | Obyvateľstvo | Obdobie | Počet dní | Priemer (t/deň) |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Boralesgamuwa UC** | Srí Lanka | ≈ 60 000 | 2012 – 2018 | 2 557 | 27,4 |
+| **Dehiwala MC** | Srí Lanka | ≈ 245 000 | 2012 – 2015 | 1 431 | 141,7 |
+| **Homagama PS** | Srí Lanka | ≈ 236 000 | 2012 – 2018 | 2 556 | 33,3 |
+| **Moratuwa MC** | Srí Lanka | ≈ 168 000 | 2015 – 2018 | 1 411 | 75,6 |
+| **Austin TX** | USA | ≈ 960 000 | 2003 – 2021 | 5 813 | 1 480,3 |
+| **Ballarat AU** | Austrália | ≈ 100 000 | 2001 – 2014 | 4 717 | 69,4 |
  
 Štyri datasety zo Srí Lanky pochádzajú z repozitára [UCloudMl/solid-waste-prediction](https://github.com/UCloudMl/solid-waste-prediction). Datasety z Austinu a Ballaratu sú verejne dostupné open-source datasety, taktiež dostupné v spomenutom repozitári.
  
